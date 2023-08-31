@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wxgsoft软件</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app" class="flex">
+        <div class="offer">
+            <div class="preview"><img
+                    onclick="open_url('about:blank');"
+                    loading="lazy" src="img/socks5tohttp.png" alt=""></div>
+            <div class="name">
+                socks5代理转http代理工具
+            </div>
+            <div class="links">
+                <a target="_blank" href="file/socks5tohtp.zip" class="link">下载</a>
+            </div>
+        </div>
+
+        <div class="offer">
+            <div class="preview"><img
+                    onclick="open_url('about:blank');"
+                    loading="lazy" src="img/epub2pdf.png" alt=""></div>
+            <div class="name">
+                epub电子书转pdf工具
+            </div>
+            <div class="links">
+                <a target="_blank" href="file/epub2pdf.zip" class="link">下载</a>
+            </div>
+        </div>
+
+        <div class="offer">
+            <div class="preview"><img
+                    onclick="open_url('about:blank');"
+                    loading="lazy" src="img/openedfileviewer.png" alt=""></div>
+            <div class="name">
+                文件占用查看器
+            </div>
+            <div class="links">
+                <a target="_blank" href="file/openedfileviewer.zip" class="link">下载</a>
+            </div>
+        </div>        
+
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: () => {
+                let offers = g_offers.slice(0, 50);
+                return {
+                    offers,
+                };
+            },
+        });
+        function open_url(url) {
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+
+</html>
